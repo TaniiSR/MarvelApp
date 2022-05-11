@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="maPurple200">#FFBB86FC</color>
+    <color name="maTeal200">#FF03DAC5</color>
+    <color name="maTeal700">#FF018786</color>
+    <color name="maBlack">#FF000000</color>
+    <color name="maWhite">#FFFFFFFF</color>
+    <!--    color primary-->
+    <color name="maBlueWithAHintOfPurple">#5E35B1</color>
+    <!--    color primary 2-->
+    <color name="maBlueWithAHintOfPurpleTwo">#5A2FB1</color>
+    <!--    color primary dark-->
+    <color name="maDarkSlateBlue">#272262</color>
+    <!--    color primary light-->
+    <color name="maBrightBlue">#007aff</color>
+    <!--    color Grey Dark-->
+    <color name="maBlueGrey">#9391b1</color>
+
+    <color name="maGrey">#636161</color>
+    <color name="maGreyLight">#F6F8FE</color>
+    <color name="maAvailable">#D1C4E9</color>
+    <color name="maBlueWithAHintOfPurpleFaded">#805E35B1</color>
 </resources>

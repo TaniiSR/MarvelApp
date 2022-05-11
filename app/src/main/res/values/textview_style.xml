@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Marvel.Widget.TextView.Black" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/Marvel.TextAppearance.TextView</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?attr/maBlackColor</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+    </style>
+
+    <style name="Marvel.TextAppearance.TextView" parent="">
+        <item name="fontFamily">@font/ta_roboto_regular</item>
+        <item name="font">@font/ta_roboto_regular</item>
+        <item name="android:fontFamily">@font/ta_roboto_regular</item>
+        <item name="android:font" tools:targetApi="o">@font/ta_roboto_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="Marvel.Widget.TextView.Grey" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/Marvel.TextAppearance.TextView</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?attr/maGreyTextColor</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+    </style>
+
+    <style name="Marvel.Widget.TextView.BlackColor.XLarge" parent="Marvel.Widget.TextView.Black">
+        <item name="android:textSize">@dimen/ma_text_size_h3</item>
+    </style>
+
+    <style name="Marvel.Widget.TextView.BlackColor.Large" parent="Marvel.Widget.TextView.Black">
+        <item name="android:textSize">@dimen/ma_text_size_h5</item>
+    </style>
+
+    <style name="Marvel.Widget.TextView.BlackColor.Medium" parent="Marvel.Widget.TextView.Black">
+        <item name="android:textSize">@dimen/ma_text_size_h6</item>
+    </style>
+
+    <style name="Marvel.Widget.TextView.BlackColor.Small" parent="Marvel.Widget.TextView.Black">
+        <item name="android:textSize">@dimen/ma_text_size_h7</item>
+    </style>
+
+    <style name="Marvel.Widget.TextView.BlackColor.XSmall" parent="Marvel.Widget.TextView.Black">
+        <item name="android:textSize">@dimen/ma_text_size_h8</item>
+    </style>
+
+
+    <style name="Marvel.Widget.TextView.GreyColor.XLarge" parent="Marvel.Widget.TextView.Grey">
+        <item name="android:textSize">@dimen/ma_text_size_h3</item>
+    </style>
+
+    <style name="Marvel.Widget.TextView.GreyColor.Large" parent="Marvel.Widget.TextView.Grey">
+        <item name="android:textSize">@dimen/ma_text_size_h5</item>
+    </style>
+
+    <style name="MarvelWidget.TextView.GreyColor.Medium" parent="Marvel.Widget.TextView.Grey">
+        <item name="android:textSize">@dimen/ma_text_size_h6</item>
+    </style>
+
+    <style name="Marvel.Widget.TextView.GreyColor.Small" parent="Marvel.Widget.TextView.Grey">
+        <item name="android:textSize">@dimen/ma_text_size_h7</item>
+    </style>
+
+    <style name="Marvel.Widget.TextView.GreyColor.XSmall" parent="Marvel.Widget.TextView.Grey">
+        <item name="android:textSize">@dimen/ma_text_size_h8</item>
+    </style>
+</resources>

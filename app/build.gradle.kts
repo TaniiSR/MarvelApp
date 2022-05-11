@@ -31,6 +31,11 @@ android {
                         "BASE_URL",
                         properties["BASE_URL"].toString()
                     )
+                    buildConfigField(
+                        "String",
+                        "API_KEY",
+                        properties["API_KEY"].toString()
+                    )
                 }
 
             } catch (e: Exception) {
@@ -70,7 +75,7 @@ android {
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility=  JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 
     viewBinding {
