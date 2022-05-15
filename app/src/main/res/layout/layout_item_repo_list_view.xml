@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:paddingHorizontal="@dimen/ma_margin_normal"
+    android:paddingTop="@dimen/ma_margin_normal">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivProfile"
+        style="@style/shapeAppearance.App.CircleImageView.MediumComponent"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="@dimen/ma_margin_normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvUserName"
+        style="@style/Marvel.Widget.TextView.GreyColor.Large"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ma_margin_medium"
+        android:layout_marginEnd="@dimen/ma_margin_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/ivProfile"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Jhon Doe" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvScore"
+        style="@style/Marvel.Widget.TextView.BlackColor.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ma_margin_medium"
+        android:layout_marginTop="@dimen/ma_margin_small"
+        android:layout_marginEnd="@dimen/ma_margin_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/ivProfile"
+        app:layout_constraintTop_toBottomOf="@id/tvUserName"
+        tools:text="Score" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/ma_margin_medium"
+        android:alpha="0.5"
+        android:background="@color/maGrey"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvScore" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

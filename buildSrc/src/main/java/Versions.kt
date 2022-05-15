@@ -28,7 +28,7 @@ object KotlinVersions {
 }
 
 object NetworkVersions {
-    const val GLIDE = "4.12.0"
+    const val GLIDE = "4.13.2"
     const val GSON = "2.8.9"
     const val RETROFIT = "2.9.0"
     const val OKHTTP = "4.9.1"

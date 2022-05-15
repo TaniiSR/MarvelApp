@@ -1,4 +1,4 @@
-package com.task.githubprofile.utils.extensions
+package com.task.marvel.utils.extensions
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData

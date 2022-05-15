@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
-import com.task.githubprofile.utils.extensions.observe
-import com.task.githubprofile.utils.extensions.toast
+import com.task.marvel.utils.extensions.observe
+import com.task.marvel.utils.extensions.toast
 import com.task.marvel.utils.base.interfaces.IBaseViewModel
 
 

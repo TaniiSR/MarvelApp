@@ -1,4 +1,4 @@
-package com.task.githubprofile.utils.extensions
+package com.task.marvel.utils.extensions
 
 import android.content.Context
 import android.widget.Toast

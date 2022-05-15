@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MarvelApp</string>
+    <string name="screen_dashboard_display_text_error">Something went wrong</string>
+    <string name="screen_dashboard_display_text_error_description">An alien is probably blocking your signal</string>
+    <string name="screen_dashboard_button_text_Retry">Retry</string>
+
 </resources>

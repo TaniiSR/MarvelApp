@@ -5,6 +5,9 @@ import com.task.marvel.data.local.localservice.MarvelRepoDbService
 import com.task.marvel.data.remote.baseclient.ApiResponse
 import com.task.marvel.data.remote.baseclient.erros.ApiError
 import com.task.marvel.data.remote.microservices.marvelrepos.MarvelRepoApi
+import com.task.marvel.utils.DateUtils.getDate
+import com.task.marvel.utils.DateUtils.isAfterDay
+import java.util.*
 import javax.inject.Inject
 
 class DataRepository @Inject constructor(
@@ -17,9 +20,13 @@ class DataRepository @Inject constructor(
         ts: String,
         offset: Int,
     ): ApiResponse<CharacterData> {
-        val repos = localRepository.getCharacter(offset)
+        val repos: CharacterData? = localRepository.getCharacter(offset)
+        val afterDay = if (repos != null) (isAfterDay(
+            getDate(repos?.timeStamp ?: "") ?: Date(),
+            getDate(ts) ?: Date()
+        )) else true
         return when {
-            repos != null -> {
+            repos != null && !afterDay -> {
                 ApiResponse.Success(
                     200,
                     data = repos

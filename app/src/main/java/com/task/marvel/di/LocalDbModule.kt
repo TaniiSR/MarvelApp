@@ -15,7 +15,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 class LocalDbModule {
     @Provides
-    fun provideTrendyDao(appDatabase: MarvelAppDB): MarvelLocalDao {
+    fun provideMarvelDao(appDatabase: MarvelAppDB): MarvelLocalDao {
         return appDatabase.MarvelLocalDao()
     }
 

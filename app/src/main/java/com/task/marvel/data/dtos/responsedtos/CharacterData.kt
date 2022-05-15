@@ -15,6 +15,8 @@ data class CharacterData(
     val count: Int? = null,
     @SerializedName("limit")
     val limit: Int? = null,
+    @SerializedName("ts")
+    var timeStamp: String? = null,
     @SerializedName("results")
     val results: List<Character>? = null,
     @SerializedName("total")
