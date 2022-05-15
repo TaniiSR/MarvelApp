@@ -36,6 +36,11 @@ android {
                         "API_KEY",
                         properties["API_KEY"].toString()
                     )
+                    buildConfigField(
+                        "String",
+                        "API_HASH",
+                        properties["API_HASH"].toString()
+                    )
                 }
 
             } catch (e: Exception) {
