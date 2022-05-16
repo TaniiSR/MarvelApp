@@ -58,15 +58,13 @@ class DashboardActivity : BaseActivity<ActivityDashboardBinding, IDashboardVM>()
                 is Character -> {
                     startDetailScreen(data)
                 }
-                is Comic -> Unit
+                is Comic -> showToast("Later will be handled")
             }
         }
     }
 
     private fun startDetailScreen(data: Character) {
-//        val intent = Intent(this, DetailActivity::class.java)
-//        intent.putExtra(DetailActivity::class.java.name, data.login)
-//        startActivity(intent)
+        showToast("Later will be handled")
     }
 
     private fun handleComicList(list: List<Comic>) {
