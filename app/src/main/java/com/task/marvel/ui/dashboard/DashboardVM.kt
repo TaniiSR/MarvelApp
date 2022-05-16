@@ -108,7 +108,7 @@ class DashboardVM @Inject constructor(
                         _comicLists.value = response.data.results ?: listOf()
                         isFirstTimeComicFetching = false
                         _isComicsSuccess.value = true
-                        _isComicsCompleted.value = response.data.count == 0
+                        _isComicsCompleted.value = (response.data.count ?: 0) == 0
                         _uiComicState.value = UIEvent.Success
                     }
                     is ApiResponse.Error -> {
