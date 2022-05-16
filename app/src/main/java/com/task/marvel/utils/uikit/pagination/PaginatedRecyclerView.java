@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.databinding.BindingAdapter;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -436,7 +435,7 @@ public class PaginatedRecyclerView extends RecyclerView {
         };
     }
 
-    @BindingAdapter("setPagination")
+
     public static void setPagination(PaginatedRecyclerView recyclerView, Pagination pagination) {
         if (recyclerView.getAdapter() != null)
             recyclerView.setPagination(pagination);

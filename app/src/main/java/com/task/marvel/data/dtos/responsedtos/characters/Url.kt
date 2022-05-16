@@ -1,4 +1,4 @@
-package com.task.marvel.data.dtos.responsedtos
+package com.task.marvel.data.dtos.responsedtos.characters
 
 
 import com.google.gson.annotations.SerializedName

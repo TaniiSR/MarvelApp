@@ -1,8 +1,8 @@
-package com.task.marvel.ui.dashboard.adapter
+package com.task.marvel.ui.dashboard.characteradapter
 
 import androidx.annotation.Nullable
 import androidx.recyclerview.widget.DiffUtil
-import com.task.marvel.data.dtos.responsedtos.Character
+import com.task.marvel.data.dtos.responsedtos.characters.Character
 
 class CharacterDiffCallback(
     val oldList: List<Character>,

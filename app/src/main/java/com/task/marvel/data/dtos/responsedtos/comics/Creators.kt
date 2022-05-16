@@ -1,10 +1,11 @@
-package com.task.marvel.data.dtos.responsedtos
+package com.task.marvel.data.dtos.responsedtos.comics
 
 
 import com.google.gson.annotations.SerializedName
+import com.task.marvel.data.dtos.responsedtos.characters.Item
 
 
-data class Series(
+data class Creators(
     @SerializedName("available")
     val available: Int?,
     @SerializedName("collectionURI")

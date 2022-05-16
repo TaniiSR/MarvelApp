@@ -1,11 +1,11 @@
-package com.task.marvel.data.dtos.responsedtos
+package com.task.marvel.data.dtos.responsedtos.comics
 
 
 import com.google.gson.annotations.SerializedName
 import com.task.marvel.data.remote.baseclient.BaseApiResponse
 
 
-data class CharactersResponse(
+data class ComicResponse(
     @SerializedName("attributionHTML")
     val attributionHTML: String?,
     @SerializedName("attributionText")
@@ -15,7 +15,7 @@ data class CharactersResponse(
     @SerializedName("copyright")
     val copyright: String?,
     @SerializedName("data")
-    val data: CharacterData?,
+    val data: ComicData?,
     @SerializedName("etag")
     val etag: String?,
     @SerializedName("status")

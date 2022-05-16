@@ -1,129 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/colMain"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:padding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.coordinatorlayout.widget.CoordinatorLayout
-            android:id="@+id/colMain"
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:background="@android:color/transparent"
-            android:padding="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="wrap_content"
+            android:background="@color/maWhite">
 
-            <com.google.android.material.appbar.AppBarLayout
-                android:id="@+id/appbar"
+            <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/maWhite">
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:titleCollapseMode="fade">
 
-                <com.google.android.material.appbar.CollapsingToolbarLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clCardBalance"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
-                    app:titleCollapseMode="fade">
+                    app:layout_collapseMode="pin"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/clCardBalance"
+                        android:id="@+id/clWidgetList"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:layout_collapseMode="pin"
-                        app:layout_scrollFlags="scroll|exitUntilCollapsed">
+                        android:layout_marginTop="@dimen/ma_margin_extra_small"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/clWidgetList"
+                        <com.task.marvel.utils.uikit.pagination.PaginatedRecyclerView
+                            android:id="@+id/rvCharactertList"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/ma_margin_extra_small"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="@dimen/ma_margin_medium"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/ma_margin_small"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:itemCount="6"
+                            tools:listitem="@layout/layout_item_comic_list_view" />
 
-                            <com.task.marvel.utils.uikit.pagination.PaginatedRecyclerView
-                                android:id="@+id/rvCharactertList"
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_marginTop="@dimen/ma_margin_medium"
-                                android:orientation="horizontal"
-                                android:paddingStart="@dimen/ma_margin_small"
-                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                tools:itemCount="6"
-                                tools:listitem="@layout/layout_item_repo_list_view" />
+                        <View
+                            android:id="@+id/vWidgetLine"
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/ma_margin_normal"
+                            android:alpha="0.3"
+                            android:background="@color/maGreyLight"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/rvCharactertList"
+                            tools:visibility="visible" />
 
-                            <View
-                                android:id="@+id/vWidgetLine"
-                                android:layout_width="0dp"
-                                android:layout_height="1dp"
-                                android:layout_marginTop="@dimen/ma_margin_normal"
-                                android:alpha="0.3"
-                                android:background="@color/maGreyLight"
-                                android:visibility="gone"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/rvCharactertList"
-                                tools:visibility="visible" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
                     </androidx.constraintlayout.widget.ConstraintLayout>
-                </com.google.android.material.appbar.CollapsingToolbarLayout>
-            </com.google.android.material.appbar.AppBarLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
 
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <com.task.marvel.utils.uikit.pagination.PaginatedRecyclerView
-                    android:id="@+id/rvCardsTransactions"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:clipToPadding="false"
-                    android:nestedScrollingEnabled="true"
-                    android:orientation="vertical"
-                    android:paddingBottom="200dp"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:itemCount="3"
-                    tools:listitem="@layout/layout_item_repo_list_view" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-
-        <include
-            android:id="@+id/shimmerLayout"
-            layout="@layout/layout_shimmer_view"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="@dimen/ma_margin_xxxl"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <include
-            android:id="@+id/errorView"
-            layout="@layout/layout_error_view" />
+            <com.task.marvel.utils.uikit.pagination.PaginatedRecyclerView
+                android:id="@+id/rvComics"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="true"
+                android:orientation="vertical"
+                android:paddingBottom="200dp"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:itemCount="3"
+                tools:listitem="@layout/layout_item_comic_list_view" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</layout>
+    <include
+        android:id="@+id/shimmerCharacter"
+        layout="@layout/layout_character_shimmer_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/shimmerLayout"
+        layout="@layout/layout_shimmer_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shimmerCharacter" />
+
+    <include
+        android:id="@+id/errorView"
+        layout="@layout/layout_error_view" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
